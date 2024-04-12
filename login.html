@@ -1,0 +1,49 @@
+<html>
+
+	<head>
+		<title>Login</title>
+		<link rel="stylesheet" href="estiloLogin.css"/>
+		
+		
+	</head>
+	
+	<body>
+	
+		<header>
+			<h1>Meu sistema de Login</h1>
+		</header>
+		
+		<section>
+			<form>
+				<label>Login: </label>
+				<input type="text" id="login"/>
+				<div id="div-senha">
+					<label>Senha: </label>
+					<input type="password" id="senha"/>
+					<span class="olho"><img id="olho-f-a" src="recursos/aberto.png" width="30px" height="30px"/></span>
+				</div>
+				<button type="button">ENTRAR</button>
+			</form>
+		</section>
+		<footer>
+			<p> &copy Desenvolvido por CriaTech - Soluções em tecnologia</p>
+		</footer>
+		
+		<script>
+			let btn = document.querySelector('.olho');
+			btn.addEventListener('click', function() {
+				let input = document.querySelector('#senha');
+				let img = document.querySelector('#olho-f-a');
+				if(input.getAttribute('type') == 'password') {
+					input.setAttribute('type', 'text');
+					img.setAttribute('src', 'recursos/fechado.png');
+				} else {
+					input.setAttribute('type', 'password');
+					img.setAttribute('src', 'recursos/aberto.png');
+				}
+			});
+		</script>
+	
+	</body>
+
+</html>
